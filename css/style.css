@@ -4,14 +4,13 @@ body, html {
 }
 
 ::selection {
-    background-color: #304057; /* Light grey background color */
-    color: #ffffff; /* Optional: change text color to white */
+    background-color: #304057;
+    color: #ffffff;
 }
 
 /* Base Styles */
 body {
     font-family: "PT Sans Caption", sans-serif;
-    /*background-color: #121212;*/
     background: radial-gradient(circle, #1a2b4a, #162a43, #0c203a, #0b1426);
     color: #ffffff;
     display: flex;
@@ -24,11 +23,10 @@ body {
 /* Container */
 .container {
     display: flex;
-    width: 95vw; /* Adjusted for slightly larger layout */
-    /*max-width: 1200px; !* Prevents excessive scaling on very wide screens *!*/
+    width: 95vw;
     padding: 3vw;
 
-    box-shadow: 0 0 6vw 4vw rgba(18, 18, 18, 0.6);
+    box-shadow: 0 0 4vw 8vw rgba(18, 18, 18, 0.6);
     border-radius: 4vw;
     background-color: rgba(18, 18, 18, 0.6);
 }
@@ -43,16 +41,17 @@ body {
     position: relative;
 }
 
+/*separating line*/
 .left-section::after {
     content: "";
     position: absolute;
-    right: -0.5px; /* Adjust to align with the container's edge */
-    top: 50%; /* Start from the middle */
-    transform: translateY(-50%); /* Center vertically */
-    width: 1px; /* Thickness of the border */
-    height: 100%; /* Full height of the container */
+    right: -0.5px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 1px;
+    height: 100%;
     background-color: #ffffff;
-    min-height: 22.5vw; /* Adjust this value to increase height */
+    min-height: 22.5vw;
 }
 
 .profile-picture {
@@ -73,7 +72,7 @@ body {
 
 h1 {
     font-family: "Monospaced", monospace;
-    font-size: 2.5vw; /* Adjusted font size */
+    font-size: 2.5vw;
     margin-bottom: -0.5vw;
     font-weight: bold;
     white-space: nowrap;
@@ -81,7 +80,7 @@ h1 {
 }
 
 p {
-    font-size: 1.2vw; /* Adjusted font size */
+    font-size: 1.2vw;
     color: #d2d2d2;
     margin-bottom: 0vw;
     z-index: 1;
@@ -93,7 +92,7 @@ p {
     display: flex;
     justify-content: center;
     gap: 1vw; /* Space between links */
-    font-size: 2.3vw; /* Adjusted font size */
+    font-size: 2.3vw;
     margin-top: 1vw;
 }
 
@@ -117,21 +116,21 @@ p {
 }
 
 
-/* Contact Information Styling */
+/* Contact Information */
 .contact-info {
     display: flex;
     justify-content: center;
-    gap: 0.1vw; /* Space between each contact item */
-    font-size: 0.8vw; /* Adjust font size for smaller, subtle text */
-    color: #7a7a7a; /* Lighter color to make it less prominent */
+    gap: 0.9vw; /* Space between each contact item */
+    font-size: 0.8vw;
+    color: #7a7a7a;
     margin-top: 0.5vw;
-    text-align: center; /* Center align text */
+    text-align: center;
     z-index: 1;
 }
 
 .contact-info span {
-    display: inline-block; /* Display each item inline */
-    margin: 0 0.5vw; /* Adds spacing between items */
+    display: inline-block; /
+    margin: 0 0.5vw;
 }
 
 /* Right Section */
@@ -156,15 +155,15 @@ p {
 }
 
 .right-section p {
-    font-size: 1.5vw; /* Adjusted font size */
-    margin-bottom: 0vw;
+    font-size: 1.5vw;
+    margin-bottom: 0;
     width: fit-content;
 
 }
 
 h2 {
     width: fit-content;
-    font-size: 2.2vw; /* Adjusted font size */
+    font-size: 2.2vw;
     margin-bottom: 1vw;
     font-weight: bold;
     z-index: 1;
@@ -174,7 +173,7 @@ h2 {
     color: #1e90ff;
     text-decoration: none;
     font-weight: bold;
-    font-size: 1.5vw; /* Adjusted font size */
+    font-size: 1.5vw;
     margin-top: 2.5vw;
     transition: color 0.3s;
     z-index: 1;
@@ -185,12 +184,12 @@ h2 {
     color: #ffffff;
 }
 
-/* Media Query for Smaller Screens */
+/* for Smaller Screens */
 @media (max-width: 768px) {
     .container {
         flex-direction: column;
         width: 65vw;
-        box-shadow: 0 0 12vw 10vw rgba(18, 18, 18, 0.55);
+        box-shadow: 0 0 5vw 10vw rgba(18, 18, 18, 0.55);
         border-radius: 4vw;
         background-color: rgba(18, 18, 18, 0.55);
     }
@@ -238,5 +237,5 @@ h2 {
     height: 100%;
     top: 0;
     left: 0;
-    z-index: 0; /* Keeps particles behind other content */
+    z-index: 0; /* Keeps particles behind other content but also hoverable */
 }
