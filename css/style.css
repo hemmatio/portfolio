@@ -1,0 +1,222 @@
+/* Disable scrolling */
+body, html {
+    overflow: hidden;
+}
+
+::selection {
+    background-color: #304057; /* Light grey background color */
+    color: #ffffff; /* Optional: change text color to white */
+}
+
+/* Base Styles */
+body {
+    font-family: "PT Sans Caption", sans-serif;
+    /*background-color: #121212;*/
+    background: radial-gradient(circle, #1a2b4a, #162a43, #0c203a, #0b1426);
+    color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 0 5vw;
+}
+
+/* Container */
+.container {
+    display: flex;
+    width: 95vw; /* Adjusted for slightly larger layout */
+    /*max-width: 1200px; !* Prevents excessive scaling on very wide screens *!*/
+    padding: 3vw;
+
+    box-shadow: 0px 0px 300px 250px rgba(18, 18, 18, 0.7);
+    border-radius: 100px;
+    background-color: rgba(18, 18, 18, 0.7);
+}
+
+/* Left Section */
+.left-section {
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-right: 0.1vw;
+    position: relative;
+}
+
+.left-section::after {
+    content: "";
+    position: absolute;
+    right: -0.5px; /* Adjust to align with the container's edge */
+    top: 50%; /* Start from the middle */
+    transform: translateY(-50%); /* Center vertically */
+    width: 1px; /* Thickness of the border */
+    height: 100%; /* Full height of the container */
+    background-color: #ffffff;
+    min-height: 22.5vw; /* Adjust this value to increase height */
+}
+
+.profile-picture {
+    position: relative;
+    z-index: 2;
+}
+
+.profile-picture img {
+    width: 12vw;
+    height: 12vw;
+    max-width: 250px;
+    max-height: 250px;
+    border-radius: 50%;
+    margin-bottom: -0.5vw;
+    position: relative;
+    z-index: 3;
+}
+
+h1 {
+    font-family: "Monospaced", monospace;
+    font-size: 2.5vw; /* Adjusted font size */
+    margin-bottom: -0.5vw;
+    font-weight: bold;
+    white-space: nowrap;
+    z-index: 1;
+}
+
+p {
+    font-size: 1.2vw; /* Adjusted font size */
+    color: #d2d2d2;
+    margin-bottom: 0vw;
+    z-index: 1;
+}
+
+/* Social Links */
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 1vw; /* Space between links */
+    font-size: 2.3vw; /* Adjusted font size */
+    margin-top: 1vw;
+}
+
+.social-links a {
+    color: #ffffff;
+    text-decoration: none;
+    z-index: 1;
+    transition: color 0.3s;
+
+}
+
+.social-links a:hover {
+    color: #1e90ff;
+}
+
+.name-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+
+/* Contact Information Styling */
+.contact-info {
+    display: flex;
+    justify-content: center;
+    gap: 0.1vw; /* Space between each contact item */
+    font-size: 0.8vw; /* Adjust font size for smaller, subtle text */
+    color: #7a7a7a; /* Lighter color to make it less prominent */
+    margin-top: 0.5vw;
+    text-align: center; /* Center align text */
+    z-index: 1;
+}
+
+.contact-info span {
+    display: inline-block; /* Display each item inline */
+    margin: 0 0.5vw; /* Adds spacing between items */
+}
+
+/* Right Section */
+.right-section {
+    flex: 3;
+    padding-left: 3vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    max-width: 500vw;
+}
+
+h2 {
+    font-size: 2.2vw; /* Adjusted font size */
+    margin-bottom: 1vw;
+    font-weight: bold;
+}
+
+.right-section p {
+    font-size: 1.5vw; /* Adjusted font size */
+    margin-bottom: 0vw;
+}
+
+.resume-link {
+    color: #1e90ff;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.5vw; /* Adjusted font size */
+    margin-top: 2.5vw;
+    transition: color 0.3s;
+    z-index: 1
+}
+
+.resume-link:hover {
+    color: #ffffff;
+}
+
+/* Media Query for Smaller Screens */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        width: 90vw;
+    }
+
+    .left-section {
+        border-right: none;
+        border-bottom: 1px solid #ffffff;
+        padding-right: 0;
+        padding-bottom: 3vw;
+    }
+
+    .left-section::after {
+        display: none;
+    }
+
+    .profile-picture img {
+        width: 25vw;
+        height: 25vw;
+    }
+
+    h2, .resume-link, .social-links a {
+        font-size: 4vw;
+    }
+
+    h1 {
+        font-size: 7vw;
+    }
+
+    p {
+        font-size: 2.5vw;
+    }
+    .contact-info {
+        margin-top: 2vw;
+        font-size: 2.5vw;
+    }
+
+    .right-section p {
+        font-size: 3vw;
+    }
+}
+
+#particles-js {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 0; /* Keeps particles behind other content */
+}
